@@ -3,14 +3,14 @@ Main LangGraph graph.
 Flow:
   START → route_node → [cache_node | single_node | multi_node] → hitl_check → END
 """
-from langgraph.graph import StateGraph, END
-from src.agent.state import AgentState
-from src.agent.router import route
+from langgraph.graph import END, StateGraph
+
 from src.agent import single_agent
-from src.agent.multi_agent import supervisor, retrieval_agent, synthesis_agent, critique_agent
+from src.agent.multi_agent import critique_agent, retrieval_agent, supervisor, synthesis_agent
+from src.agent.router import route
+from src.agent.state import AgentState
 from src.cache.semantic_cache import get_cache
 from src.config import settings
-
 
 # ── Node functions ────────────────────────────────────────────────────────────
 

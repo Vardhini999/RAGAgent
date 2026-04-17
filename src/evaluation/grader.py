@@ -2,12 +2,14 @@
 LLM-as-judge grader: scores a response on faithfulness and answer relevance.
 Runs async so it never blocks the response returned to the user.
 """
-from langchain_groq import ChatGroq
-from langchain_core.messages import HumanMessage, SystemMessage
-from pydantic import BaseModel
-from src.config import settings
-import re
 import asyncio
+import re
+
+from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_groq import ChatGroq
+from pydantic import BaseModel
+
+from src.config import settings
 
 _SYSTEM = """You are an evaluation judge for a RAG system.
 Score the response on two axes (0.0 - 1.0):

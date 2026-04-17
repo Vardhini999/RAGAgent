@@ -1,5 +1,5 @@
-import pytest
 import numpy as np
+
 from src.cache.semantic_cache import SemanticCache
 
 

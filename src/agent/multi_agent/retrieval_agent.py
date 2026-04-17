@@ -1,6 +1,6 @@
 """Retrieval agent: runs hybrid search for each sub-question, deduplicates chunks."""
-from src.retrieval.hybrid import retrieve
 from src.config import settings
+from src.retrieval.hybrid import retrieve
 
 
 def run(sub_questions: list[str], k: int | None = None) -> list[dict]:

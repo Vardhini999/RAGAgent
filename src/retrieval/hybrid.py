@@ -2,9 +2,8 @@
 Hybrid retrieval using Reciprocal Rank Fusion (RRF) over vector + BM25 results.
 alpha controls vector weight: 1.0 = pure vector, 0.0 = pure BM25.
 """
-from src.retrieval import vectorstore, bm25
 from src.config import settings
-
+from src.retrieval import bm25, vectorstore
 
 _RRF_K = 60  # standard RRF constant
 

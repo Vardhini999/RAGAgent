@@ -2,10 +2,12 @@
 Critique agent: reviews the synthesized answer for factual grounding,
 completeness, and hallucination risk. Returns a revised answer + final confidence.
 """
-from langchain_groq import ChatGroq
-from langchain_core.messages import HumanMessage, SystemMessage
-from src.config import settings
 import re
+
+from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_groq import ChatGroq
+
+from src.config import settings
 
 _SYSTEM = """You are a critique agent reviewing an AI-generated answer.
 

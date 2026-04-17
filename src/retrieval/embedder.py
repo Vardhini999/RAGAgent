@@ -1,6 +1,7 @@
-from sentence_transformers import SentenceTransformer
-from src.config import settings
 import numpy as np
+from sentence_transformers import SentenceTransformer
+
+from src.config import settings
 
 _model: SentenceTransformer | None = None
 

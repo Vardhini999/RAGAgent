@@ -4,10 +4,12 @@ Cache hit when cosine similarity between new query and a cached query exceeds th
 Tracks hit/miss counts for metrics reporting.
 """
 from collections import OrderedDict
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+
 import numpy as np
-from src.retrieval.embedder import embed_one
+
 from src.config import settings
+from src.retrieval.embedder import embed_one
 
 
 @dataclass

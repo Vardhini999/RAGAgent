@@ -3,9 +3,10 @@ Gradio UI for the Agentic RAG pipeline.
 Talks to the FastAPI backend via HTTP.
 Deployable to Hugging Face Spaces.
 """
+import os
+
 import gradio as gr
 import httpx
-import os
 
 API_BASE = os.getenv("API_BASE_URL", "http://localhost:8000")
 TIMEOUT = 120.0

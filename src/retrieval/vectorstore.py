@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import uuid
+
 import chromadb
 from langchain_core.documents import Document
+
 from src.config import settings
 from src.retrieval.embedder import embed
-import uuid
 
 _client = None
 _collection = None

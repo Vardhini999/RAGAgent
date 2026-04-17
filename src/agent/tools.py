@@ -1,7 +1,8 @@
 """Shared tools available to both single-agent and multi-agent modes."""
 from langchain_core.tools import tool
-from src.retrieval.hybrid import retrieve
+
 from src.config import settings
+from src.retrieval.hybrid import retrieve
 
 
 @tool

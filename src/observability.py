@@ -2,8 +2,9 @@
 Langfuse observability wrapper.
 If LANGFUSE_PUBLIC_KEY is not set, all calls are no-ops — zero friction for local dev.
 """
-from src.config import settings
 from typing import Any
+
+from src.config import settings
 
 _client = None
 

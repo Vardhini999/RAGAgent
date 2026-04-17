@@ -1,5 +1,6 @@
 import pytest
-from src.guardrails.guardrails import check_input, check_output, GuardrailViolation
+
+from src.guardrails.guardrails import GuardrailViolation, check_input, check_output
 
 
 def test_clean_input_passes():

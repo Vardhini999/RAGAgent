@@ -1,11 +1,14 @@
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+import tempfile
+from pathlib import Path
+
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_core.documents import Document
-from pathlib import Path
-import tempfile
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
-def load_and_chunk(file_path: str | Path, chunk_size: int = 512, chunk_overlap: int = 64) -> list[Document]:
+def load_and_chunk(
+    file_path: str | Path, chunk_size: int = 512, chunk_overlap: int = 64
+) -> list[Document]:
     path = Path(file_path)
     if path.suffix.lower() == ".pdf":
         loader = PyPDFLoader(str(path))

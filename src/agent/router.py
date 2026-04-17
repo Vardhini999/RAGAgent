@@ -4,11 +4,13 @@ Uses a fast LLM call (groq_model_fast) to score query complexity 0-1.
 Above complexity_threshold → multi-agent.
 Also checks semantic cache before routing.
 """
-from langchain_groq import ChatGroq
-from langchain_core.messages import HumanMessage, SystemMessage
-from src.config import settings
-from src.cache.semantic_cache import get_cache
 import re
+
+from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_groq import ChatGroq
+
+from src.cache.semantic_cache import get_cache
+from src.config import settings
 
 _SYSTEM = """You are a query complexity classifier. Given a user query, output a single float
 between 0.0 and 1.0 representing its complexity for a retrieval-augmented system.

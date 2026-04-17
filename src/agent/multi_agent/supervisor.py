@@ -2,8 +2,9 @@
 Supervisor agent: decomposes the query into sub-tasks and delegates to
 retrieval_agent → synthesis_agent → critique_agent in sequence.
 """
-from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_groq import ChatGroq
+
 from src.config import settings
 
 _SYSTEM = """You are a supervisor orchestrating a multi-agent RAG pipeline.
@@ -17,7 +18,7 @@ def decompose(query: str) -> list[str]:
         SystemMessage(content=_SYSTEM),
         HumanMessage(content=f"Query: {query}"),
     ])
-    lines = [l.strip() for l in response.content.strip().splitlines() if l.strip()]
+    lines = [line.strip() for line in response.content.strip().splitlines() if line.strip()]
     sub_questions = []
     for line in lines:
         # strip leading number/punctuation

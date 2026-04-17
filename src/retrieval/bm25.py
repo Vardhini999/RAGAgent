@@ -1,6 +1,7 @@
-from rank_bm25 import BM25Okapi
-from langchain_core.documents import Document
 import re
+
+from langchain_core.documents import Document
+from rank_bm25 import BM25Okapi
 
 _index: BM25Okapi | None = None
 _corpus: list[str] = []

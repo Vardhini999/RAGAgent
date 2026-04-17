@@ -1,7 +1,8 @@
-from fastapi import APIRouter, UploadFile, File, HTTPException
-from src.retrieval.chunker import load_and_chunk_bytes
-from src.retrieval import vectorstore, bm25
+from fastapi import APIRouter, File, HTTPException, UploadFile
+
 from src.api.schemas import IngestResponse
+from src.retrieval import bm25, vectorstore
+from src.retrieval.chunker import load_and_chunk_bytes
 
 router = APIRouter()
 

@@ -6,10 +6,9 @@ Prints a summary table and returns per-example results.
 """
 import json
 from pathlib import Path
+
 from src.agent.graph import run_query
 from src.evaluation.grader import grade
-from src.retrieval.hybrid import retrieve
-from src.config import settings
 
 TEST_SET_PATH = Path(__file__).parent.parent.parent / "eval_data" / "test_set.json"
 

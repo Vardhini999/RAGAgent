@@ -1,6 +1,7 @@
 """Synthesis agent: produces a structured, cited answer from retrieved chunks."""
-from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_groq import ChatGroq
+
 from src.config import settings
 
 _SYSTEM = """You are a synthesis agent. You receive a user query and a set of retrieved
