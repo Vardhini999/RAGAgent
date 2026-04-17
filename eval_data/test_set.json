@@ -1,0 +1,22 @@
+[
+  {
+    "query": "What is the main topic of the uploaded document?",
+    "note": "Simple factual — should route single-agent"
+  },
+  {
+    "query": "Summarize the key arguments and compare the evidence presented in different sections.",
+    "note": "Complex synthesis — should route multi-agent"
+  },
+  {
+    "query": "What conclusions does the document draw and what are their limitations?",
+    "note": "Moderate — could go either way"
+  },
+  {
+    "query": "List all specific numbers, statistics, or quantitative claims mentioned.",
+    "note": "Extraction task — single-agent"
+  },
+  {
+    "query": "How do the different sections of the document relate to each other? What is the overall argument structure?",
+    "note": "Multi-step reasoning — multi-agent"
+  }
+]
