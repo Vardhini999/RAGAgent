@@ -2,7 +2,7 @@
 
 > Domain-agnostic document Q&A with adaptive single/multi-agent routing, hybrid retrieval, semantic caching, LLM-as-judge evaluation, and full observability.
 
-**Live demo:** `<your-hf-spaces-url>`  
+**Live demo:** https://vardhini999-raga.hf.space  
 **Stack:** LangGraph · Groq (Llama 3.3 70B) · ChromaDB · BM25 · sentence-transformers · FastAPI · Gradio · Langfuse
 
 ---
@@ -61,7 +61,7 @@ multi-agent routing rate, cache hit rate, p50/p95 latency.
 
 ```bash
 # 1. Clone and install
-git clone <repo-url>
+git clone https://github.com/Vardhini999/RAGAgent
 cd agentic-rag
 uv sync --extra dev
 
